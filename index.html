@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: black;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      overflow: hidden;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      max-height: 100%;
+      text-align: center;
+    }
+    .slide {
+      display: none;
+      animation: fade 1.5s;
+    }
+    .slide img {
+      max-height: 70vh;
+      max-width: 90vw;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    .quote {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: #ffccd5;
+    }
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="your-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="pic1.jpg" alt="Memory 1">
+      <div class="quote">"You are my favorite notification ❤️"</div>
+    </div>
+    <div class="slide">
+      <img src="pic2.jpg" alt="Memory 2">
+      <div class="quote">"I still fall for you every single day 💕"</div>
+    </div>
+    <div class="slide">
+      <img src="pic3.jpg" alt="Memory 3">
+      <div class="quote">"With you, every moment is magic ✨"</div>
+    </div>
+    <div class="slide">
+      <img src="pic4.jpg" alt="Memory 4">
+      <div class="quote">"My happy place is you 🌸"</div>
+    </div>
+    <div class="slide">
+      <img src="pic5.jpg" alt="Memory 5">
+      <div class="quote">"I love you more than yesterday, less than tomorrow 💗"</div>
+    </div>
+    <div class="slide">
+      <img src="pic6.jpg" alt="Memory 6">
+      <div class="quote">"You make my world brighter ☀️"</div>
+    </div>
+    <div class="slide">
+      <img src="pic7.jpg" alt="Memory 7">
+      <div class="quote">"Forever is my favorite word with you 💍"</div>
+    </div>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+  </script>
+
+</body>
+</html>
+
+
